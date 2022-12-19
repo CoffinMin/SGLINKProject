@@ -1,0 +1,57 @@
+.wrapping {
+	width: 400px;
+	height:150px;
+	border: 1px solid #000;
+	list-style: none;
+	left:350px;
+}
+
+.photo {
+	width: 300px;
+	height: 250px;
+}
+
+.product {
+	position:absolute;
+	top:140px;
+	left:350px;
+}
+.btn {
+	width:300px;
+	position:relative;
+	top:-50px;
+	left:430px;
+}
+
+.explain {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 33px;
+}
+
+.b1 {
+	width: 90px;
+	height: 40px;
+	font-size: 13px;
+	border-radius: 9px;
+	background-color: dimgrey;
+	color: white;
+	outline: 0;
+	border: 0;
+	font-weight: bold;
+}
+
+.b2 {
+	width: 90px;
+	height: 40px;
+	font-size: 13px;
+	margin-left: 16px;
+	border-radius: 9px;
+	background-color: dimgrey;
+	color: white;
+	outline: 0;
+	border: 0;
+	font-weight: bold;
+}

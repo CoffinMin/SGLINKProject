@@ -1,0 +1,43 @@
+.head {
+	height: 60px;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: -15px;
+}
+
+.subtitle {
+	margin: 2px;
+	font-size: 13px;
+	color: #999999;
+	border-bottom: 2px #d3d3d3 solid;
+}
+
+h2.bl.sq {
+	padding-left: 18px;
+	background-position: 0.2em 0.5em;
+}
+
+.bl.sq {
+	background:
+		url(http://linc.sogang.ac.kr/front/images/local/bullet_h2.gif)
+		no-repeat;
+}
+.title a:hover{
+	text-decoration:none;
+}
+.picture1 img{
+	height: 500px;
+	width: 1000px;
+	
+}
+.picture img{
+	height: 200px;
+	width: 1000px;
+	
+}

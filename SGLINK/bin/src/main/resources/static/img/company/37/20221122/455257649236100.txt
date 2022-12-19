@@ -1,0 +1,1 @@
+sec:authorize="hasAnyAuthority('ROLE_ADMIN')"

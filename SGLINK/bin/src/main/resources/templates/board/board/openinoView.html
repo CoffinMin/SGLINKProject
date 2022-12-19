@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	layout:decorate="~{layouts/layoutCom}">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>공지사항</title>
+<!--제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- 게시판 css -->
+<link th:href="@{/css/board/board/boardView.css}" rel="stylesheet">
+
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">오픈게시판</p>
+			<p class="subTitle2">오픈게시판 글 상세화면입니다</p>
+		</div>
+		<div class="board_wrap">
+			<div class="board_view_wrap">
+				<div class="board_view">
+					<div class="title" th:text="${info.title}"></div>
+					<input type="hidden" name="id" th:value="${info.id}">
+					<div class="info">
+						<dl>
+							<dt>글쓴이</dt>
+							<dd>
+								<span class="linfo" th:text="${info.member.userId}"></span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>작성일</dt>
+							<dd>
+								<span th:text="${#temporals.format(info.registerTime, 'MM-dd')}"></span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>조회</dt>
+							<dd>
+								<span class="linfo" th:text="${info.readCnts}"></span>
+							</dd>
+						</dl>
+					</div>
+					<div class="cont">
+						<p th:text="${info.content}"></p>
+					</div>
+				</div>
+				<div class="bt_wrap">
+					<a onclick="javascript:location.href='/boards/openino/list'"
+						class="on">목록</a> <a th:if="${loginUserId == registerId}"
+						th:href="@{./edit(id=${info.id})}">수정</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

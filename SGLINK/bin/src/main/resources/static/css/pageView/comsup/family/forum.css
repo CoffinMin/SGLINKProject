@@ -1,0 +1,160 @@
+.head {
+	height: 40px;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: -20px;
+}
+
+.subtitle {
+	margin: 2px;
+	font-size: 13px;
+	color: #999999;
+}
+
+.tab {
+	font-size: 14px;
+	color: #B40404;
+	text-align: center;
+	width: 187px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	border: 2px solid #B40404;
+	border-bottom: none;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.tab2 {
+	color: #666666;
+	background: #F3F3F3;
+	font-size: 14px;
+	text-align: center;
+	width: 187px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	border: 1px solid #CCCCCC;
+	text-decoration: none;
+}
+
+.tab:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.tab2:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+h2.bl.sq {
+	padding-left: 18px;
+	background-position: 0.2em 0.5em;
+}
+
+.bl.sq {
+	height: 20px;
+	background:
+		url(http://linc.sogang.ac.kr/front/images/local/bullet_h2.gif)
+		no-repeat;
+}
+
+.bl.md {
+	padding-left: 15px;
+	margin-bottom: 15px;
+	height: 15px;
+	background:
+		url(http://linc.sogang.ac.kr/front/images/common/omni_2x2_000_50.png)
+		no-repeat;
+	background-position: 0.1em 0.7em;
+}
+
+.content {
+	width: 777px;
+	margin-top: 30px;
+}
+
+.content p {
+	margin-left: 2px;
+}
+
+.search {
+	width: 740px;
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 370px;
+	padding: 10px;
+}
+
+.select1 {
+	height: 25px;
+	border-radius: 0px;
+	border-color: #CCCCCC;
+	font-size: 12px;
+	color: #6E6E6E;
+}
+
+.select2 {
+	height: 25px;
+	border-radius: 0px;
+	border-color: #CCCCCC;
+	font-size: 12px;
+	color: #6E6E6E;
+}
+
+.select3 {
+	height: 21px;
+	border-radius: 0px;
+	font-size: 12px;
+	border: 1px solid #CCCCCC;
+}
+
+.lookup {
+	width: 55px;
+	height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none !important;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid #5B5E6A;
+	background: #5B5E6A;
+	transform: translateY(10%)
+}
+
+input::placeholder {
+	color: #D8D8D8;
+}
+
+.lookup img {
+	width: 11px;
+	margin-right: 2px;
+}
+
+table {
+	position: absolute;
+	margin-top: 125px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 13px;
+	font-weight: 300px;
+	width: 760px;
+	border-top: 2px solid #B20000;
+	border-collapse: collapse;
+}
+
+thead th {
+	background: #F6F6F6;
+	font-weight: bold;
+}
+
+table th, td {
+	border: 0.5px solid #CCCCCC;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="calendar.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+  <script src="jquery-ui-1.13.2/jquery-ui.css"></script>
+ <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
+   <script type="text/javascript">
+        // Make your own here: https://eternicode.github.io/bootstrap-datepicker
+
+        var dateSelect = $('#flight-datepicker');
+        var dateDepart = $('#start-date');
+        var dateReturn = $('#end-date');
+        var spanDepart = $('.date-depart');
+        var spanReturn = $('.date-return');
+        var spanDateFormat = 'ddd, MMMM D yyyy';
+
+        dateSelect.datepicker({
+            autoclose: true,
+            format: "mm/dd",
+            maxViewMode: 0,
+            startDate: "now"
+        }).on('change', function() {
+            var start = $.format.date(dateDepart.datepicker('getDate'), spanDateFormat);
+            var end = $.format.date(dateReturn.datepicker('getDate'), spanDateFormat);
+            spanDepart.text(start);
+            spanReturn.text(end);
+        });
+    </script>
+</head>
+
+
+<body>
+    <main>
+        <h1><span class="fontawesome-plane"></span> Moon Flights</h1>
+        <h2>Select your flight dates below</h2>
+        <div class="input-daterange input-group" id="flight-datepicker">
+            <div class="form-item"><label>Depart on</label><span class="fontawesome-calendar"></span><input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Select depart date" data-date-format="DD, MM d" /><span class="date-text date-depart"></span></div>
+            <div class="form-item"><label>Return on</label><span class="fontawesome-calendar"></span><input class="input-sm form-control" type="text" id="end-date" name="end" placeholder="Select return date" data-date-format="DD, MM d" /><span class="date-text date-return"></span></div>
+        </div>
+    </main>
+       
+</body></html>

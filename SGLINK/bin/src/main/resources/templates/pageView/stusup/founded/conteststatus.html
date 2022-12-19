@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutStu}">
+<head>
+<meta charset="UTF-8">
+<title>학생창업콘테스트현황페이지</title>
+<link href="/css/pageView/stusup/founded/conteststatus.css"
+	rel="stylesheet">
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">창업교육</p>
+			<p class="subTitle2">창업 경진대회 지원현황화면입니다</p>
+		</div>
+		<div class="body">
+			<div class="sub">
+				<p class="tab2" onclick="location.href='/stusup/founded/contest'">프로그램</p>
+				<p class="tab"
+					onclick="location.href='/stusup/founded/conteststatus'">지원현황</p>
+			</div>
+			<div class="content">
+				<div class="search">
+					<select class="select1">
+						<option value>2014년 Start-Up UCC 공모전</option>
+					</select> <select class="select2">
+						<option value>구분전체</option>
+						<option value="A">접수</option>
+						<option value="B">신청</option>
+					</select> <input type="text" class="select3" placeholder="작품명,신청자를 입력하세요">
+					<button class="lookup">
+						<img src="/img/icon.png">검색
+					</button>
+				</div>
+
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th width="25%">지원프로그램</th>
+						<th width="10%">구분</th>
+						<th width="20%">작품명</th>
+						<th width="15%">학과</th>
+						<th width="10%">신청자</th>
+						<th width="10%">신청일</th>
+						<th width="10%">UCC</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="7">등록된 게시물 정보가 없습니다.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ad</title>
+
+<link href="sidebar_2.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div th:fragment="sidebar" id="side">
+		<div id="leftMenu">
+			<div id="leftTitle">
+				<a href="#">빅데이터</a>
+			</div>
+			<div id="subMenu">
+				<div class="depth1">
+					<li class="item"><a href="/bigdata/bigdataList" id="left" class="lnb">가족회사 빅데이터</a></li>
+					<li class="item"><a href="/bigdata/bigdataIssue" id="left" class="lnb">창업 트랜드</a></li>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

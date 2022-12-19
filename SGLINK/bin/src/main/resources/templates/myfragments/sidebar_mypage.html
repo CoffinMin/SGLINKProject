@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>cmnt</title>
+
+<link href="sidebar_2.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div th:fragment="sidebar" id="side">
+		<div id="leftMenu">
+			<div id="leftTitle">
+				<a href="#">마이페이지</a>
+			</div>
+			<div id="subMenu">
+				<div class="depth1">
+					<li class="item"><a href="/mypage/view" id="left" class="lnb">내정보</a></li>
+					<li class="item"><a href="/mypage/update" id="left1" class="lnb">회원정보
+							수정</a></li>
+					<li class="item"><a href="#" id="left2" class="lnb">사업신청
+							결과</a></li>
+					<li class="item"><a href="#" id="left2" class="lnb">장비대여
+							결과</a></li>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

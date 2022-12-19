@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutStu}">
+<head>
+<meta charset="UTF-8">
+<title>equipment</title>
+<link th:href="@{/css/equipment/equipment/equipmentList.css}"
+	rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">인프라</p>
+			<p class="subTitle2">보유장비 화면입니다</p>
+		</div>
+		<div class="h1 contents">
+			<div class="article">
+				<div class="search">
+					<form name="searchForm" method="post" action="boardlist.do"></form>
+					<input type="text" placeholder="검색어 입력">
+					<button>검색</button>
+				</div>
+				<br>
+				<div class="h2 article">
+					<div class="app_list">
+						<ul th:if="${list.process.toString()=='APPROVE'}" th:each="list : ${resultMap.list}" >
+							<li th:each="imgSrc: ${list.img}" ><a th:href="@{./view(equiId=${list.equiId})}"> <span
+									class="photo"> <img th:src="${imgSrc.stored_file_path}"
+										alt>
+								</span> <br> <span class="title" th:text="${list.equiName}"></span>
+									<br> <span class="info" th:text="${list.equiRegister}"></span>
+									<br> <span th:text="${list.equiTel}"></span> <br> <span
+									class="state none"> 예약가능 </span>
+							</a></li>
+
+						</ul>
+						<br>
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<div class="equi_page">
+			<ul class="equi_page">
+				<li class="page-item"
+					th:each="index : ${#numbers.sequence(1, resultMap.totalPage)}"
+					th:with="paging=${resultMap.paging}"><a class="page-link"
+					th:href="@{./list(page=${index - 1},page=${paging.pageSize})}"><span
+						th:text="${index}"></span></a></li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>

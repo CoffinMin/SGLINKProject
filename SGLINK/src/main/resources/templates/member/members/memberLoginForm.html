@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutMb}">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>로그인창</title>
+<!-- 사용자 CSS 추가 -->
+<th:block layout:fragment="css">
+<link th:href="@{/css/member/members/memberLoginForm.css}" rel="stylesheet">
+	<style>
+.error {
+	color: #bd2130;
+}
+</style>
+</th:block>
+</head>
+
+<body>
+	<div layout:fragment="content" class="content" id="content">
+	<div id="Title">
+			<p class="subTitle1">로그인</p>
+			<p class="subTitle2">로그인 화면입니다</p>
+		</div>
+		<div class="box_line">
+			<img src="/img/logo.JPG" width="650" height="500">
+			<div class="login">
+				<h2>로그인</h2>
+				<ul>
+					<form role="form" method="post" action="/members/login">
+						<li class="bg_ip"><input required id="userid" class="cb"
+							type="text" placeholder="아이디를 입력하세요" name="userId" /></li>
+						<li class="bg_ip"><input required id="password" class="cb"
+							type="password" placeholder="비밀번호를 입력하세요" name="password" /></li>
+						<li class="cust_txt">
+							<p th:if="${loginErrorMsg}" class="error"
+								th:text="${loginErrorMsg}"></p>
+						</li>
+
+						<li class="cust"><input type="submit" value="로그인"></li>
+						<li class="cust"><input type="button" class="btn btn-primary"
+							onClick="location.href='/members/memberRole'" value="회원가입"></li>
+						<input type="hidden" th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}">
+					</form>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

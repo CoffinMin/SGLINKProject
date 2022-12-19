@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layoutMypage}">
+<head>
+<meta charset="UTF-8">
+<title>장비대여 결과화면</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link th:href="@{/css/member/mypage/mypageEquiList.css}" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">장비대여 결과</p>
+			<p class="subTitle2">장비대여 결과화면입니다</p>
+		</div>
+		<div class="board_wrap">
+			<div class="board_list_wrap">
+				<div class="memberlist" id="frm">
+					<table class="board_list">
+						<tr class="top">
+							<th class="com1 borderside">장비코드</th>
+							<th class="com2 borderside">장비명</th>
+							<th class="com3 borderside">시작기간</th>
+							<th class="com4 borderside">종료기간</th>
+							<th class="com5 borderside">승인여부</th>
+						</tr>
+						<tbody class="">
+							<tr th:each="list,index : ${resultMap.list}"
+								th:with="paging=${resultMap.paging}">
+								<td class="com1 borderside"><span th:text="${list.equiId}"></span></td>
+								<td class="com2 borderside"><span
+									th:text="${list.equiName}"></span></td>
+								<td class="com3 borderside"><span
+									th:text="${list.startDate}"></span></td>
+								<td class="com4 borderside"><span
+									th:text="${list.endDate}"></span></td>
+								<td class="com5 borderside"><span class="unapprove"
+									th:if="${list.equiProcess.toString()=='UNAPPROVE'}">승인되지않음</span><span
+									class="approve"
+									th:if="${list.equiProcess.toString()=='APPROVE'}">승인됨</span></td>
+							<tr>
+						</tbody>
+					</table>
+					<div class="board_page">
+						<ul class="">
+							<li class="page-item"
+								th:each="index : ${#numbers.sequence(1, resultMap.totalPage)}"
+								th:with="paging=${resultMap.paging}"><a class="page-link"
+								th:href="@{./list(page=${index-1}, page=${paging.pageSize})}"><span
+									th:text="${index}"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<script th:inline="javascript">
+				$(".insert").click(function() {
+					if (confirm("승인 혹은 비승인하시겠습니까?") == true) {
+					} else {
+						return false;
+					}
+				});
+			</script>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

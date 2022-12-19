@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutCom}">
+<head>
+<meta charset="UTF-8">
+<title>equipment</title>
+<link th:href="@{/css/equipment/equipment/equipmentList.css}"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+	crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function(){
+		var msg= $("#msg").val();
+		alert(msg);
+		window.location = '/company/family/new'
+	})
+</script>
+</head>
+<body>
+
+
+
+
+	<div layout:fragment="content" id="content">
+
+		<input type="hidden" th:value="${msg}" id= "msg">
+	</div>
+</body>
+</html>

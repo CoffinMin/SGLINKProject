@@ -1,0 +1,185 @@
+
+
+html {
+    font-size: 10px;
+}
+
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+a:hover{
+    text-decoration: none;
+  
+    
+}
+
+.board_wrap {
+    width: 1000px;
+
+  /*   margin: 100px auto; */
+/*   background:red; */
+}
+
+.board_wrap {
+	width: 100%;
+ 	min-width: 320px; 
+/* 	padding: 0 30px; */
+	box-sizing: border-box;
+}
+
+
+.bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap a {
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap a:first-child {
+    margin-left: 0;
+}
+
+.bt_wrap a.on {
+    background: #000;
+    color: #fff;
+}
+
+
+
+.board_list {
+    width: 1000px;
+    border-top: 2px solid #000;
+}
+
+
+
+.borderside{
+	border-bottom: 1px solid #ddd;
+}
+
+.board_list .com1 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com2 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com3 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com4 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com5 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com6 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com7 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+
+.board_list > div.top > div {
+    font-weight: 600;
+}
+
+
+
+
+
+.board_list .num {
+	height:20px;
+    width: 10%;
+}
+
+.board_list .title {
+	height:20px;
+    width: 60%;
+}
+.board_list>tbody .title {
+	
+    text-align:left;
+}
+
+.centertit{
+	
+ 	text-align:center;	 
+	 
+}
+	
+
+.board_list .com1 {
+	height:20px;
+    width: 10%;
+}
+.board_list .com2 {
+	height:20px;
+    width: 10%;
+}
+.board_list .com3 {
+	height:20px;
+    width: 30%;
+}
+.board_list .com4 {
+	height:20px;
+    width: 10%;
+}
+.board_list .com5 {
+	height:20px;
+    width: 20%;
+}
+.board_list .com6 {
+	height:20px;
+    width: 10%;
+}
+.board_list .com7 {
+	height:20px;
+    width: 10%;
+}
+
+.delete{
+	width: 150px;
+	height: 35px;
+	margin-left: 850px;
+	margin-top: 15px;
+}

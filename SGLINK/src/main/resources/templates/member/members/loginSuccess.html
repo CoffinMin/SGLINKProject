@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutMain}">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+<head>
+<meta charset="UTF-8">
+<title>메인페이지</title>
+<link href="/css/main/main.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div class="cards-list">
+			<a href="/bigdata/bigdataList">
+				<div class="cad1" style="background: #DF0101;">
+
+					<div class="card_image">
+						<img src="/img/main/link04.png">
+					</div>
+					<div class="card_title title-white">
+						<p>빅데이터</p>
+					</div>
+
+				</div>
+			</a> <a href="/comsup/family/introduce">
+				<div class="cad2" style="background: #FF8000;">
+					<div class="card_image">
+						<img src="/img/main/link05.png">
+					</div>
+					<div class="card_title title-white">
+						<p>기업지원</p>
+					</div>
+				</div>
+			</a> <a href="/stusup/cooperation/introduce">
+				<div class="cad3" style="background: #088A08;">
+					<div class="card_image">
+						<img src="/img/main/link06.png">
+					</div>
+					<div class="card_title title-white">
+						<p>학생지원</p>
+					</div>
+				</div>
+			</a> <a href="/equipment/list">
+				<div class="cad4" style="background: #045FB4;">
+					<div class="card_image">
+						<img src="/img/main/link07.png">
+					</div>
+					<div class="card_title title-white">
+						<p>장비지원</p>
+					</div>
+				</div>
+			</a> <a href="/boards/free/list">
+				<div class="cad5" style="background: #5F04B4;">
+					<div class="card_image">
+						<img src="/img/main/link09.png">
+					</div>
+					<div class="card_title title-white">
+
+						<p>커뮤니티</p>
+					</div>
+				</div>
+				</a>
+		</div>
+		
+
+
+		<div id="cont">
+			<div id="btn_group"></div>
+			<div id="search">
+
+				<form class="search-form" action="/boards/total/list" method="get">
+					<input type="text" name="searchKeyword" placeholder="Search"
+						class="search-input">
+					<div class="finder">
+						<img src="/img/main/finder.png">
+					</div>
+					<!-- <button type="submit" class="search-button">
+						<svg class="submit-button"></svg>
+					</button> -->
+				</form>
+			</div>
+
+
+			<div class="tabs">
+				<div class="tab-header">
+					<div class="active">
+						<i class="<!-- fa fa- -->code"></i> 공지사항
+					</div>
+					<div>
+						<i class="<!-- fa fa- -->pencil-square-o"></i> 오픈게시판
+					</div>
+					<div>
+						<i class="<!-- fa fa -->-bar-chart"></i> 가족사업
+					</div>
+					<div>
+						<i class="<!-- fa fa -->-envelope-o"></i> 커뮤니티
+					</div>
+				</div>
+				<div class="tab-indicator"></div>
+				<div class="tab-body">
+
+					<div class="active">
+						<h2></h2>
+						<form id="frm" method="get">
+							<p class="tb" th:if="${list.BoardName == 'NoticeBoard'}"
+								th:each="list,index : ${resultMap.list}">
+								<a th:href="@{./boards/notice/view(id=${list.id})}"><span
+									th:text="${'[공지사항] '+list.title}" class="noto word"></span></a> <span
+									class="date"
+									th:text="${#temporals.format(list.registerTime, 'MM-dd')}"></span>
+							</p>
+						</form>
+
+
+					</div>
+
+					<div>
+						<h2></h2>
+
+						<form id="frm" method="get">
+							<p class="tb" th:each="list1,index1 : ${resultMap.list1}">
+								<a th:href="@{./boards/openino/view(id=${list1.id})}"><span
+									th:text="${'[오픈게시판] '+list1.title}" class="noto word"></span></a> <span
+									class="date"
+									th:text="${#temporals.format(list1.registerTime, 'MM-dd')}"></span>
+							</p>
+						</form>
+
+					</div>
+
+					<div>
+						<h2></h2>
+						<form id="frm" method="get">
+							<p class="tb" th:each="list2,index2 : ${resultMap.list2}">
+								<a th:href="@{./business/view(busiId=${list2.busiId})}"><span
+									th:text="${'[가족사업] '+list2.busiName}" class="noto"></span></a> <span
+									class="date"
+									th:text="${#temporals.format(list2.registerTime, 'MM-dd')}"></span>
+							</p>
+						</form>
+					</div>
+					<div>
+						<h2></h2>
+
+						<p class="tb" th:if="${list.BoardName == 'FreeBoard'}"
+							th:each="list,index : ${resultMap.list}">
+							<a th:href="@{./boards/free/view(id=${list.id})}"><span
+								th:text="${'[자유게시판] '+list.title}" class="noto word"></span></a> <span
+								class="date"
+								th:text="${#temporals.format(list.registerTime, 'MM-dd')}"></span>
+						</p>
+
+					</div>
+					<script src="/js/tabmenu.js"></script>
+				</div>
+			</div>
+			<div class="tabs1">
+				<div class="tab-header1">
+					<div class="active1">
+						<i class="<!-- fa fa- -->code"></i> 행사소식
+					</div>
+
+				</div>
+				<div class="wrapper"></div>
+				<div class="container">
+					<div th:fragment="slide1" id="slide1">
+						<ul class="slider">
+							<div class="item">
+								<img src="/img/tabs1/test1.jpg">
+							</div>
+							<div class="item">
+								<img src="/img/tabs1/test2.jpg">
+							</div>
+							<div class="item">
+								<img src="/img/tabs1/test3.jpg">
+							</div>
+						</ul>
+						<script src="/js/slide1.js"></script>
+					</div>
+				</div>
+			</div>
+			<script src="/js/tabmenu2.js"></script>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+#head {
+	height: 60px;
+	font-size: 40px;
+	font-weight: bold;
+	border-bottom: 1px #d3d3d3 solid;
+	letter-spacing: 2px;
+}
+#container{
+	margin-bottom: 200px;
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.subtitle {
+	margin: 2px;
+	font-size: 13px;
+	color: #999999;
+}
+
+h2.bl.sq {
+	padding-left: 18px;
+	background-position: 0.2em 0.5em;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.bl.sq {
+	background:
+		url(http://linc.sogang.ac.kr/front/images/local/bullet_h2.gif)
+		no-repeat;
+}
+
+.content {
+	width: 800px;
+}
+
+.content p {
+	margin-top: -10px;
+	margin-left: 25px;
+}
+
+thead th {
+	background: #F6F6F6;
+	font-weight: bold;
+}
+
+table {
+	text-align: center;
+	line-height: 30px;
+	font-size: 13px;
+	font-weight: 300px;
+	width: 800px;
+	border-top: 2px solid #B20000;
+	border-collapse: collapse;
+}
+
+table th, td {
+	border: 0.5px solid #CCCCCC;
+}
+
+.bl.sq {
+	background:
+		url(http://linc.sogang.ac.kr/front/images/local/bullet_h2.gif)
+		no-repeat;
+	padding-left: 18px;
+	background-position: 0.2em 0.5em;
+}
+
+.bl.gd {
+	padding-left: 8px;
+	background:
+		url(http://linc.sogang.ac.kr/front/images/common/omni_2x2_000_50.png)
+		no-repeat;
+	background-position: 0.8em 1.2em;
+}
+
+.content .dia {
+	position: relative;
+	width: 800px;
+	height: 80px;
+	border: 1px solid #CCCCCC;
+	background: #F9F9F9;
+}
+
+.content .dia p {
+	margin: 15px;
+}
+
+.content .toxic {
+	position: relative;
+	top: 10px;
+}
+
+.content .dn {
+	margin-top: -10px;
+	margin-left: 25px;
+}
+
+.toxic {
+	margin-top: 15px;
+}
+
+h3.bl.mdp {
+	padding-left: 20px;
+	background:
+		url(http://linc.sogang.ac.kr/front/images/common/omni_6x6.png)
+		no-repeat;
+	background-position: 0.2em 0.6em;
+}
+
+.pic {
+	margin-top: 5px;
+	margin-left: 25px;
+}

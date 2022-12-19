@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutMain}">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+<head>
+<meta charset="UTF-8">
+<title>메인페이지</title>
+<link href="/css/main/main.css" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div class="cards-list">
+			<div class="cad1" style="background: #DF0101;">
+				<div class="card_image">
+					<img src="/img/main/link04.png">
+				</div>
+				<div class="card_title title-white">
+					<p>사업단소개</p>
+				</div>
+			</div>
+
+			<div class="cad2" style="background: #FF8000;">
+				<div class="card_image">
+					<img src="/img/main/link05.png">
+				</div>
+				<div class="card_title title-white">
+					<p>기업지원</p>
+				</div>
+			</div>
+
+			<div class="cad3" style="background: #088A08;">
+				<div class="card_image">
+					<img src="/img/main/link06.png">
+				</div>
+				<div class="card_title title-white">
+					<p>학생지원</p>
+				</div>
+			</div>
+
+			<div class="cad4" style="background: #045FB4;">
+				<div class="card_image">
+					<img src="/img/main/link07.png">
+				</div>
+				<div class="card_title title-white">
+					<p>장비지원</p>
+				</div>
+			</div>
+
+			<div class="cad5" style="background: #5F04B4;">
+				<div class="card_image">
+					<img src="/img/main/link09.png">
+				</div>
+				<div class="card_title title-white">
+
+					<p>커뮤니티</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="cont">
+			<div id="btn_group"></div>
+			<div id="search">
+
+				<form class="search-form" action="/boards/total/list" method="get" >
+					<input type="text" name="searchKeyword" placeholder="Search" class="search-input">
+
+					<div class="finder">
+						<img src="/img/main/finder.png">
+					</div>
+					<!-- <button type="submit" class="search-button">
+						<svg class="submit-button"></svg>
+					</button> -->
+				</form>
+			</div>
+
+
+			<div class="tabs">
+				<div class="tab-header">
+					<div class="active">
+						<i class="fa fa-code"></i> 공지사항
+					</div>
+					<div>
+						<i class="fa fa-pencil-square-o"></i> 오픈게시판
+					</div>
+					<div>
+						<i class="fa fa-bar-chart"></i> 가족사업
+					</div>
+					<div>
+						<i class="fa fa-envelope-o"></i> 커뮤니티
+					</div>
+				</div>
+				<div class="tab-indicator"></div>
+				<div class="tab-body">
+					<div class="active">
+						<h2></h2>
+						<p class="tb">
+							<a href="#"><span title="[공지사항] 정관민님이 돌아올 예정.."
+								class="noto"> [공지사항] 정관민님이 돌아올 예정..</span></a> 
+								<span class="date">22.11.19</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[공지사항] 최성은님이 카드사업으로 창업 준비 중.."
+								class="noto"> [공지사항] 최성은님이 카드사업으로 창업 준비 중..</span></a> 
+								<span class="date">22.11.17</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[공지사항] 김동평님 탭메뉴 구축하다 심신미약.."
+								class="noto"> [공지사항] 김동평님 탭메뉴 구축하다 심신미약..</span></a> 
+								<span class="date">22.11.16</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[공지사항] 권도현님 코드 구현 중 한남대로 도망.."
+								class="noto"> [공지사항] 권도현님 코드 구현 중 한남대로 도망..</span></a> 
+								<span class="date">22.11.14</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[공지사항] 박은비님 집으로 도망칠 예정.."
+								 class="noto"> [공지사항] 박은비님 집으로 도망칠 예정..</span></a> 
+								 <span class="date">22.11.11</span>
+						</p>
+					</div>
+					<div>
+						<h2></h2>
+						<p class="tb">
+							<a href="#"><span title="[공지사항] 정관민님이 돌아올 예정.."
+								class="noto"> [오픈게시판] 정관민님이 돌아올 예정..</span></a> 
+								<span class="date">22.11.19</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[오픈게시판] 최성은님이 카드사업으로 창업 준비 중.."
+								class="noto"> [오픈게시판] 최성은님이 카드사업으로 창업 준비 중..</span></a> 
+								<span class="date">22.11.17</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[오픈게시판] 김동평님 탭메뉴 구축하다 심신미약.."
+								class="noto"> [오픈게시판] 김동평님 탭메뉴 구축하다 심신미약..</span></a> 
+								<span class="date">22.11.16</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[오픈게시판] 권도현님 코드 구현 중 한남대로 도망.."
+								class="noto"> [오픈게시판] 권도현님 코드 구현 중 한남대로 도망..</span></a> 
+								<span class="date">22.11.14</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[오픈게시판] 박은비님 집으로 도망칠 예정.."
+								class="noto"> [오픈게시판] 박은비님 집으로 도망칠 예정..</span></a> 
+								<span class="date">22.11.11</span>
+						</p>
+					</div>
+					<div>
+						<h2></h2>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 정관민님이 돌아올 예정.."
+								class="noto"> [가족사업] 정관민님이 돌아올 예정..</span></a> 
+								<span class="date">22.11.19</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 최성은님이 카드사업으로 창업 준비 중.."
+								class="noto"> [가족사업] 최성은님이 카드사업으로 창업 준비 중..</span></a> 
+								<span class="date">22.11.17</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 김동평님 탭메뉴 구축하다 심신미약.."
+								class="noto"> [가족사업] 김동평님 탭메뉴 구축하다 심신미약..</span></a> 
+								<span class="date">22.11.16</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 권도현님 코드 구현 중 한남대로 도망.."
+								class="noto"> [가족사업] 권도현님 코드 구현 중 한남대로 도망..</span></a> 
+								<span class="date">22.11.14</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 박은비님 집으로 도망칠 예정.."
+								class="noto"> [가족사업] 박은비님 집으로 도망칠 예정..</span></a> 
+								<span class="date">22.11.11</span>
+						</p>
+					</div>
+					<div>
+						<h2></h2>
+						<p class="tb">
+							<a href="#"><span title="[커뮤니티] 정관민님이 돌아올 예정.."
+								class="noto"> [커뮤니티] 정관민님이 돌아올 예정..</span></a> 
+								<span class="date">22.11.19</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[커뮤니티] 최성은님이 카드사업으로 창업 준비 중.."
+								class="noto"> [커뮤니티] 최성은님이 카드사업으로 창업 준비 중..</span></a> 
+								<span class="date">22.11.17</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[커뮤니티] 김동평님 탭메뉴 구축하다 심신미약.."
+								class="noto"> [커뮤니티] 김동평님 탭메뉴 구축하다 심신미약..</span></a> 
+								<span class="date">22.11.16</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[커뮤니티] 권도현님 코드 구현 중 한남대로 도망.."
+								class="noto"> [커뮤니티] 권도현님 코드 구현 중 한남대로 도망..</span></a> 
+								<span class="date">22.11.14</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[커뮤니티] 박은비님 집으로 도망칠 예정.."
+								class="noto"> [커뮤니티] 박은비님 집으로 도망칠 예정..</span></a> 
+								<span class="date">22.11.11</span>
+						</p>
+					</div>
+					<script src="/js/tabmenu.js"></script>
+				</div>
+			</div>
+			<div class="tabs1">
+				<div class="tab-header1">
+					<div class="active1">
+						<i class="code"></i> 행사소식
+					</div> 
+
+				</div>
+				<div class="tab-indicator1"></div>
+				<div class="tab-body1">
+					<div th:fragment="slide1" id="slide1">
+						<div class="slide slide_wrap1">
+							<div class="slide_item item4">1</div>
+							<div class="slide_item item5">2</div>
+							<div class="slide_item item6">3</div>
+							<div class="slide_prev_button slide_button"></div>
+							<div class="slide_next_button slide_button"></div>
+							<ul class="slide_pagination"></ul>
+						</div>
+						<script src="/js/slide.js"></script>
+					</div>
+				</div>
+			</div>
+			<script src="/js/tabmenu2.js"></script>
+		</div>
+	</div>
+</body>
+</html>

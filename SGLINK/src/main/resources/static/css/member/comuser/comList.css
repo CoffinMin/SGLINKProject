@@ -1,0 +1,332 @@
+
+
+html {
+    font-size: 10px;
+}
+
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+a:hover{
+    text-decoration: none;
+  
+    
+}
+
+.board_wrap {
+    width: 1000px;
+
+  /*   margin: 100px auto; */
+/*   background:red; */
+}
+
+.board_wrap {
+	width: 100%;
+ 	min-width: 320px; 
+/* 	padding: 0 30px; */
+	box-sizing: border-box;
+}
+
+
+.bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap a {
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap a:first-child {
+    margin-left: 0;
+}
+
+.bt_wrap a.on {
+    background: #000;
+    color: #fff;
+}
+
+
+
+.board_list {
+    width: 1000px;
+    border-top: 2px solid #000;
+}
+
+
+
+.borderside{
+	border-bottom: 1px solid #ddd;
+}
+
+
+} 
+.board_list .num1 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num2 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num3 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num4 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num5 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num6 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num7 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num8 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .num9 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+
+.board_list .com1 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com2 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com3 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com4 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com5 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com6 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.board_list .com7 {
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+
+
+.board_list > div.top > div {
+    font-weight: 600;
+}
+
+
+
+
+
+.board_list .num1 {
+	height:20px;
+    width: 10%;
+}
+.board_list .num2 {
+	height:20px;
+    width: 10%;
+}
+.board_list .num3 {
+	height:20px;
+    width: 30%;
+}
+.board_list .num4 {
+	height:20px;
+    width: 10%;
+}
+.board_list .num5 {
+	height:20px;
+    width: 20%;
+}
+.board_list .num6 {
+	height:20px;
+    width: 10%;
+}
+.board_list .num7 {
+	height:20px;
+    width: 10%;
+}
+.board_list .num8 {
+	height:20px;
+    width: 10%;
+}
+.board_list .num9 {
+	height:20px;
+    width: 10%;
+}
+
+
+
+
+.board_list .com1 {
+	height:20px;
+    width: 14%;
+}
+.board_list .com2 {
+	height:20px;
+    width: 14%;
+}
+.board_list .com3 {
+	height:20px;
+    width: 14%;
+}
+.board_list .com4 {
+	height:20px;
+    width: 14%;
+}
+.board_list .com5 {
+	height:20px;
+    width: 14%;
+}
+.board_list .com6 {
+	height:20px;
+    width: 14%;
+}
+.board_list .com7 {
+	height:20px;
+    width: 14%;
+}
+
+
+
+.board_list>tbody .title {
+	
+    text-align:left;
+}
+
+.centertit{
+	
+ 	text-align:center;	 
+	 
+}
+	
+
+.board_list .writer {
+	height:20px;
+    width: 10%;
+}
+
+.board_list .date {
+	height:20px;
+    width: 10%;
+}
+
+.board_list .count {
+	height:20px;
+    width: 10%;
+}
+
+.board_page {
+	 margin-top: 30px;
+    text-align: center; 
+    font-size: 20px;
+}
+
+.board_page .page-item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+
+    font-size: 20px;
+/*     line-height: 100%; */
+}
+
+.board_page .a {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.board_page a.num {
+    padding-top: 9px;
+    font-size: 1.4rem;
+}
+
+.board_page a.num.on {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+.approve{
+	color:blue;
+	font-weight: bold;
+}
+
+.unapprove{
+	color:red;
+	font-weight: bold;
+}
+

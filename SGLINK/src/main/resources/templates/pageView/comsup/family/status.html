@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutCom}">
+<head>
+<meta charset="UTF-8">
+<title>가족기업신청현황페이지</title>
+
+<link href="/css/pageView/comsup/family/status.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+	<div id="Title">
+				<p class="subTitle1">가족기업</p>
+				<p class="subTitle2">가족기업 현황 화면입니다</p>
+			</div>
+		<div id="introduce">
+			<div class="body">
+				<div class="sub">
+					<p class="tab2"
+						onclick="location.href='/comsup/family/introduce'">제도소개</p>
+					<p class="tab2"
+						onclick="location.href='/company/family/new'">가족기업신청</p>
+					<p class="tab"
+						onclick="location.href='/comsup/family/status'">가족기업현황</p>
+					<p class="tab2"
+						onclick="location.href='/comsup/family/forum'">가족기업포럼</p>
+				</div>
+				<div class="content">
+					<div class="search">
+						<select class="select1">
+							<option value>업종 전체</option>
+							<option value="01">공공기관/공사/협회/학원/학교</option>
+							<option value="02">방송/언론/미디어/광고/홍보</option>
+							<option value="03">금융(은행/보험/증권/종금/캐피탈/부동산)</option>
+							<option value="04">컨설팅/리서치/조사/연구</option>
+							<option value="05">호텔/관광/항공/프렌차이즈</option>
+							<option value="06">유통/물류/운송</option>
+							<option value="07">건강/의료/병원/제약/생명공학</option>
+							<option value="08">특허/법률/세무/회계</option>
+							<option value="09">기계/금속/철강/자동차</option>
+							<option value="10">건설/토목/건축</option>
+							<option value="11">석유/화학/에너지</option>
+							<option value="12">섬유/의류/피혁</option>
+							<option value="13">생활화학/화장품</option>
+							<option value="14">가구/목재/종이/완구</option>
+							<option value="15">식품/농어업/광업</option>
+							<option value="16">전기/전자/통신/반도체></option>
+							<option value="17">전산/컴퓨터/게임/IT</option>
+							<option value="18">캐릭터/애니메이션/디자인/설계</option>
+							<option value="99">기타</option>
+						</select> <select class="select2">
+							<option value>산학협력분야 전체</option>
+							<option value="A">반도체</option>
+							<option value="B">전기/전자</option>
+							<option value="C">디스플레이</option>
+							<option value="D">정보통신</option>
+							<option value="E">나노/신소재</option>
+							<option value="F">기계/부품소재</option>
+							<option value="G">바이오/제약</option>
+							<option value="H">섬유/화학</option>
+							<option value="I">에너지/환경</option>
+							<option value="J">건축/토목</option>
+							<option value="K">경영전략 및 정책</option>
+							<option value="Z">기타</option>
+						</select> <input type="text" class="select3" placeholder="기업/기관명,주생산품">
+						<button class="lookup">
+							<img src="/img/icon.png">조회
+						</button>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th width="7%">번호</th>
+								<th width="15%">기업/기관명</th>
+								<th width="15%">전화번호</th>
+								<th width="35%">업종</th>
+								<th width="18%">주요상품</th>
+								<th width="10%">홈페이지</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="list,index : ${resultMap.list}"
+								th:with="paging=${resultMap.paging}">
+								<td class="com1 borderside"><span th:text="${index.count}"></span></td>
+								<td class="com2 borderside"><span
+									th:text="${list.comUniname}"></span></td>
+								<td class="com5 borderside"><span th:text="${list.comTel}"></span></td>
+								<td class="com4 borderside"><span
+									th:text="${list.comSectors}"></span></td>
+								<td class="com3 borderside"><span
+									th:text="${list.comProduct}"></span></td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

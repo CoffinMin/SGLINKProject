@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>stu</title>
+
+<link href="sidebar_1.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div th:fragment="sidebar" id="side">
+		<div id="leftMenu">
+			<div id="leftTitle">
+				<a href="#">학생지원</a>
+			</div>
+			<div id="subMenu">
+				<div class="depth1">
+					<li class="item"><a href="#" id="left" class="lnb">산학연계</a>
+						<ul class="depth2">
+							<li><a href="/stusup/cooperation/introduce">- 제도소개</a></li>
+							<li><a href="/stusup/cooperation/open">- 오픈공간입주</a></li>
+							<li><a href="/stusup/cooperation/independent">- 독립공간입주</a></li>
+						</ul></li>
+					<li class="item"><a href="#" id="left1" class="lnb">창업교육</a>
+						<ul class="depth2">
+							<li><a href="/stusup/founded/introduce">- 센터소개</a></li>
+							<li><a href="/stusup/founded/camp">- 창업캠프</a></li>
+							<li><a href="/stusup/founded/mentoring">- 창업멘토링</a></li>
+							<li><a href="/stusup/founded/contest">- 창업경진대회</a></li>
+
+						</ul></li>
+					<li class="item"><a href="#" id="left2" class="lnb">현장실습</a>
+						<ul class="depth2">
+							<li><a href="/stusup/training/introduce">- 센터소개</a></li>
+							<li><a href="/stusup/training/guide">- 현장실습안내</a></li>
+							<li><a href="/stusup/training/program">- 현장실습프로그램</a></li>
+						</ul></li>
+					<li class="item"><a href="#" id="left2" class="lnb">인프라</a>
+						<ul class="depth2">
+							<li><a href="/stusup/infra/introduce">- 센터소개</a></li>
+							<li><a href="/equipment/list">- 장비목록</a></li>
+							<li><a href="/stusup/infra/howto">- 사용절차</a></li>
+							<li><a href="/stusup/infra/onlineapplication">- 인터넷신청방법</a></li>
+							<li><a href="/stusup/infra/precaution">- 이용자수칙/주의사항</a></li>
+						</ul></li>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('.depth2').slideUp();
+				$('.depth1 li').hover(function() {
+
+					$(this).children('.lnb').addClass('act');
+				}, function() {
+					$(this).children('.lnb').removeClass('act');
+				});
+				$('.lnb').click(function() {
+					$('.depth2').hide();
+					$(this).next('.depth2').slideDown(500);
+				});
+			});
+		</script>
+	</div>
+</body>
+</html>

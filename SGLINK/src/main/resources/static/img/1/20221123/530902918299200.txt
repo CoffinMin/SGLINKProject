@@ -1,0 +1,1 @@
+사용자의 요청 > member/com/checkId > String comId > SELECT comUniname from company where comid = String comId 찾은 값이 널값이면 기업이 없다고 처리

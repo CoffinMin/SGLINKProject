@@ -1,0 +1,192 @@
+#signup {
+	width: 1000px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.head {
+	height: 40px;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: -20px;
+}
+
+.subtitle {
+	margin: 2px;
+	font-size: 13px;
+	color: #999999;
+}
+
+.content {
+	width: 800px;
+	height: 600px;
+	position: absolute;
+	margin-top:60px;
+}
+
+.tab {
+	font-size: 14px;
+	color: #B40404;
+	text-align: center;
+	width: 187px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	border: 2px solid #B40404;
+	border-bottom: none;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.tab2 {
+	color: #666666;
+	background: #F3F3F3;
+	font-size: 14px;
+	text-align: center;
+	width: 187px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	border: 1px solid #CCCCCC;
+	text-decoration: none;
+}
+
+.tab:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.tab2:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+.main{
+	margin-top:30px;
+}
+.main2 {
+	margin-top: 40px;
+}
+
+.id {
+	float: left;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: -0.5px;
+	width: 300px;
+	height: 40px;
+	position: relative;
+}
+
+.text {
+	padding: 0;
+	margin: 0;
+	width: 400px;
+	height: 40px;
+	font-size: 20px;
+	border: 2px #d2d2d2 solid;
+	border-radius: 5px;
+}
+.text2{
+	background-color:#f2f2f2;
+}
+
+.btn-primary{
+	margin-top: 50px;
+	margin-left: 400px;
+	font-size: 20px;
+	font-weight:bold;
+}
+.memberlist {
+
+	text-align: center;
+	font-weight:bold;
+}
+
+.listtable {
+	border-top: 2px solid #A4A4A4;
+	height: 150px;
+}
+.listhead{
+	font-size:20px;
+	border-bottom: 1px solid #A4A4A4;
+}
+
+table, th, td {
+	border-collapse: collapse;
+}
+
+.listhead{
+	background: #D8D8D8;
+}
+
+.listbody tr{
+	border-bottom: 1px solid #A4A4A4;
+}
+.page{
+	margin-top: 10px;
+	font-size:20px;
+	text-align:center;
+}
+.pagingnum{
+	width:35px;
+	height:35px;
+	margin:auto;
+	background:#E6E6E6;
+	border-radius:7px;
+}
+.page a{
+	padding:0.3px;
+	color:black;
+	font-size: 0.8em;
+}
+.memberlist {
+	margin-left: 150px;
+	text-align: center;
+	font-weight:bold;
+}
+
+.listtable {
+	border-top: 2px solid #A4A4A4;
+	height: 150px;
+}
+.listhead{
+	font-size:20px;
+	border-bottom: 1px solid #A4A4A4;
+}
+
+table, th, td {
+	border-collapse: collapse;
+}
+
+.listhead{
+	background: #D8D8D8;
+}
+
+.listbody tr{
+	border-bottom: 1px solid #A4A4A4;
+}
+.page{
+	margin-top: 10px;
+	font-size:20px;
+	text-align:center;
+}
+.pagingnum{
+	width:35px;
+	height:35px;
+	margin:auto;
+	background:#E6E6E6;
+	border-radius:7px;
+}
+.page a{
+	padding:0.3px;
+	color:black;
+	font-size: 0.8em;
+}

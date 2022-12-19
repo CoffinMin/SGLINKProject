@@ -1,0 +1,29 @@
+도현님 - 장비신청페이지 제작 , 장비상세페이지제작 
+성은님 - 게시판 엔티티에 여러개의 게시판을 추가하기위한 속성 만들기
+은비님 - 자료실만들기
+동평 - 패키지관리하기 , ex) member패키지안에 controller  > 관련컨트롤러 ex)MemberController,MypageController  , service, dto 만들기
+		     ex) board패키지안에 controller > 관련컨트롤러 ex)NoticeBoardController,FileBoardController , servece,dto 만들기
+			각각의 서비스는 하나의 서비스 dto는 관련된 dto넣기
+			entity,repository 따로 관리 error,config,constant 따로관리
+			패키지는 큰단위로 member,admin,board,company,business,equipment 가 만들어 질 것임.
+         			패키지에 있는 자바파일 복사 붙혀넣기시 기존 파일 삭제하고 패키지 연결 다시해주기.
+         폴더관리하기
+	css도 비슷하게 관리하기
+	templates>
+	     (패키지이름)>
+		(컨트롤러매핑이름)>
+			(관련된 이름.html)
+		(컨트롤러매핑이름2)>
+			(관련된 이름.html)
+         	templates>
+	     members>
+		member>
+		        memberFrom.html
+		        memberLoginForm.html
+		mypage>
+		        mypage.html
+		        memberUpdateForm.html
+	
+			    	    
+		   	
+		          	

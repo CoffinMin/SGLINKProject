@@ -1,0 +1,60 @@
+#greeting {
+	width: 1000px;
+}
+
+.head {
+	height: 60px;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.subtitle {
+	margin: 2px;
+	font-size: 13px;
+	color: #999999;
+}
+
+.content {
+	width: 800px;
+}
+
+.content p {
+	margin: 15px;
+}
+
+.bl.sq {
+	background:
+		url(http://linc.sogang.ac.kr/front/images/local/bullet_h2.gif)
+		no-repeat;
+	padding-left: 18px;
+	background-position: 0.2em 0.5em;
+}
+
+.content .dia {
+	margin: 17px;
+	position: relative;
+	width: 800px;
+	height: 220px;
+	border: 1px solid #CCCCCC;
+	background: #F9F9F9;
+}
+
+.content .dia p {
+	margin: 17px;
+}
+
+.content h3 {
+	margin-left: 17px;
+}
+
+.content img {
+	margin-left: 17px;
+	margin-bottom: -10px;
+}

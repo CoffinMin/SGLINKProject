@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layoutMain}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>403에러발생!!</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+<link th:href="@{/css/error/errors.css}" rel="stylesheet">
+</head>
+
+<body>
+<div layout:fragment="content">
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h3>클라이언트는 콘텐츠에 접근할 권리를 가지고 있지 않습니다</h3>
+				<h1><span>4</span><span>0</span><span>3</span></h1>
+			</div>
+			<h2>미승인상태입니다 서버는 거절을 위한 적절한 응답을 보냅니다.</h2>
+		</div>
+	</div>
+</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

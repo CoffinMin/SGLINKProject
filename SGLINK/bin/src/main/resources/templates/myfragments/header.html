@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>header 공통 양식</title>
+
+
+</head>
+
+<body>
+	<div th:fragment="header" id="header">
+		<div class="header">
+			<a href="/" class="topmenu">서강대학교 공식 홈페이지</a>
+			<div id="sns">
+				<a href=""><img src="/img/one_facebook.png"></a> <a href="">
+				<img src="/img/one_youtube.png"></a>
+			</div>
+			<div id="login">
+				<a class="topmenu" href="/members/memberRole" sec:authorize="isAnonymous()">회원가입</a> 
+				<a class="topmenu" href="/admin/member/list"  sec:authorize="hasAnyAuthority('ROLE_ADMIN')">관리자</a>
+				<a class="topmenu"> </a>
+				<a class="topmenu" href="" sec:authorize="hasAnyAuthority('ROLE_STU')">학생회원</a>
+				<a class="topmenu" href="" sec:authorize="hasAnyAuthority('ROLE_COM')">기업회원</a> 
+				<a class="topmenu" href="/members/login" sec:authorize="isAnonymous()">로그인</a>
+				<a class="topmenu" href="/members/logout" sec:authorize="isAuthenticated()">로그아웃</a> 
+				<a class="topmenu" href="/members/mypage"></a> 
+				<a class="topmenu" href="/mypage/view" sec:authorize="isAuthenticated()">마이페이지</a>
+
+			</div>
+		</div>
+		<div id="TopMenu">
+			<div id="home">
+				<a href="/"><img src="/img/home.png"></a>
+			</div>
+			<div id="pMenu">
+				<ul>
+					<li><a href="/introduce/greeting">사업단소개</a>
+						<!-- <ul style="margin-left: 60px">
+							<li><a href="/introduce/greeting" style="margin-left: 3px">인사말</a></li>
+							<li><a href="/introduce/vision" style="margin-left: 3px">비전과목표</a></li>
+							<li><a href="/introduce/organization" style="margin-left: 3px">조직구성</a></li>
+							<li><a href="/introduce/direction" style="margin-left: 3px">오시는길</a></li>
+						</ul> -->
+						</li>
+					<li><a href="/comsup/family/introduce">기업지원</a>
+						<!-- <ul style="margin-left: 45px">
+							<li><a href="/comsup/family/introduce" style="margin-left: 3px">가족기업</a></li>
+							<li><a href="/comsup/infra/introduce" style="margin-left: 3px">인프라</a></li>
+							<li><a href="/comsup/openino/introduce" style="margin-left: 3px; font-size:20px;">오픈 이노베이션</a></li>
+						</ul> -->
+						</li>
+					<li><a href="/stusup/cooperation/introduce">학생지원</a>
+					<!-- 	<ul style="margin-left: 45px">
+							<li><a href="/stusup/cooperation/introduce" style="margin-left: 3px">산학연계</a></li>
+							<li><a href="/stusup/founded/introduce" style="margin-left: 3px">창업교육</a></li>
+							<li><a href="/stusup/training/introduce" style="margin-left: 3px">현장실습</a></li>
+							<li><a href="/stusup/infra/introduce" style="margin-left: 3px">인프라</a></li>
+						</ul> -->
+						</li>
+					<li><a href="/boards/notice/list">커뮤니티</a>
+						<!-- <ul style="margin-left: 45px">
+							<li><a href="/boards/notice/list" style="margin-left: 3px">공지사항</a></li>
+							<li><a href="/boards/free/list" style="margin-left: 3px">자유게시판</a></li>
+							<li><a href="#" style="margin-left: 3px">Q&A</a></li>
+							<li><a href="/boards/reference/list" style="margin-left: 3px">자료실</a></li>
+							<li><a href="/community/cmntEvent" style="margin-left: 3px">행사소식</a></li>
+						</ul> -->
+						</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

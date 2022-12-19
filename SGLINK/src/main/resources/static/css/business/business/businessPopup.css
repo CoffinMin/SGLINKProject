@@ -1,0 +1,173 @@
+#popup {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.swal2-title {
+	font-size: 15px !important;
+	text-align: center !important;
+}
+
+#swal2-content {
+	font-size: 12px !important;
+	margin-bottom: -20px !important;
+}
+
+.swal2-popup {
+	width: 250px !important;
+	height: 200px !important;
+}
+
+.swal2-icon {
+	width: 60px !important;
+	height: 60px !important;
+	top: -10px !important;
+	margin-bottom: 10px !important;
+}
+
+.swal2-cancel {
+	width: 55px !important;
+	height: 30px !important;
+	font-size: 12px !important;
+	line-height: 5px !important;
+	text-align: center !important;
+}
+
+.swal2-confirm {
+	width: 55px !important;
+	height: 30px !important;
+	font-size: 12px !important;
+	line-height: 5px !important;
+}
+
+.swal2-html-container {
+	width: 160px !important;
+}
+
+.title {
+	width: 330px;
+	margin: 5px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 22px;
+}
+
+#popup img {
+	border-radius: 10px;
+	margin: 10px;
+	width: 90px;
+	height: 90px;
+	margin: 10px;
+}
+
+.detail {
+	position: relative;
+	width: 350px;
+	height: 110px;
+}
+
+.detail p {
+	margin: 0px;
+	position: relative;
+	top: -98px;
+	left: 115px;
+	font-weight: bold;
+	position: relative;
+}
+
+.detail h2 {
+	cursor: default;
+	margin: 0px;
+	position: relative;
+	text-align: center;
+	margin: 0px;
+	width: 100px;
+	height: 30px;
+	top: -121px;
+	left: 180px;
+	font-size: 20px;
+	line-height: 23px;
+	margin: 0px;
+}
+
+.sec_cal {
+	margin-top: 10px;
+	width: 300px;
+	padding: 10px;
+	position: relative;
+}
+
+.sec_cal .p1 {
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: bold;
+}
+
+.sec_cal .p2 {
+	font-size: 11px;
+	line-height: 15px;
+	font-weight: bold;
+}
+
+.input {
+	margin-left: -20px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#startDate, #endDate {
+	width: 100px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.mybtn {
+	cursor: pointer;
+	margin-left: 120px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90px;
+	height: 40px;
+	font-size: 13px;
+	border-radius: 9px;
+	background-color: dimgrey;
+	color: white;
+	outline: 0;
+	border: 0;
+	font-weight: bold;
+	width: 90px;
+}
+
+.b1 {
+	margin-left: 95px;
+	margin-top: 30px;
+	width: 90px;
+	height: 40px;
+	font-size: 13px;
+	border-radius: 9px;
+	background-color: #f2f2f2;
+	outline: 0;
+	border: 0;
+	font-weight: bold;
+	text-align: center;
+	line-height: 44px;
+	cursor: pointer;
+	width: 90px;
+}
+
+.b1 a {
+	color: black;
+}
+.date{
+	margin-bottom:-35px;
+}
+.date li{
+	margin-left:-20px;
+	font-size:14px;
+	font-weight:bold;
+	list-style:none;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>company</title>
+
+</head>
+
+<body>
+	<div th:fragment="sidebar" id="side">
+		<div id="leftMenu">
+			<div id="leftTitle">
+				<a href="#">기업지원</a>
+			</div>
+			<div id="subMenu">
+				<div class="depth1">
+					<li class="item"><a href="#" id="left" class="lnb">가족기업</a>
+						<ul class="depth2">
+							<li><a href="/comsup/family/introduce">- 제도소개</a></li>
+							<li><a href="/company/family/new">- 가족기업신청</a></li>
+							<li><a href="/comsup/family/status">- 기업현황</a></li>
+							<li><a href="/comsup/family/forum">- 기업포럼</a></li>
+						</ul></li>
+					<li class="item"><a href="#" id="left2" class="lnb">오픈이노베이션</a>
+						<ul class="depth2">
+							<li><a href="/comsup/openino/introduce">- 센터소개</a></li>
+							<li><a href="/comsup/openino/model">- 협력모델</a></li>
+							<li><a href="/boards/openino/list">- 오픈게시판</a></li>
+						</ul></li>
+					<li class="item"><a href="#" id="left1" class="lnb">인프라</a>
+						<ul class="depth2">
+							<li><a href="/comsup/infra/introduce">- 센터소개</a></li>
+							<li><a href="/equipment/new">- 보유장비 신청란</a></li>
+							<li><a href="/business/new">- 사업신청</a></li>
+							<li><a href="/equipment/list">- 장비목록</a></li>
+							<li><a href="/business/list">- 사업목록</a></li>
+							<li><a href="/comsup/infra/howto">- 사용절차</a></li>
+							<li><a href="/comsup/infra/onlineapplication">- 인터넷신청방법</a></li>
+							<li><a href="/comsup/infra/precaution">- 이용자수칙/주의사항</a></li>
+
+						</ul></li>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('.depth2').hide();
+				$('.depth1 li').hover(function() {
+
+					$(this).children('.lnb').addClass('act');
+				}, function() {
+					$(this).children('.lnb').removeClass('act');
+				});
+				$('.lnb').click(function() {
+					$('.depth2').hide();
+					$(this).next('.depth2').slideDown(500);
+				});
+			});
+		</script>
+	</div>
+</body>
+
+</html>

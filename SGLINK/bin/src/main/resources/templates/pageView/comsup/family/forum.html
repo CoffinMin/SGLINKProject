@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutCom}">
+<head>
+<meta charset="UTF-8">
+<title>가족기업포럼페이지</title>
+<link href="/css/pageView/comsup/family/forum.css" rel="stylesheet">
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">가족기업</p>
+			<p class="subTitle2">가족기업 포럼화면입니다</p>
+		</div>
+
+		<div class="body">
+			<div class="sub">
+				<p class="tab2" onclick="location.href='/comsup/family/introduce'">제도소개</p>
+				<p class="tab2" onclick="location.href='/company/family/new'">가족기업신청</p>
+				<p class="tab2" onclick="location.href='/comsup/family/status'">가족기업현황</p>
+				<p class="tab" onclick="location.href='/comsup/family/forum'">가족기업포럼</p>
+			</div>
+			<div>
+				<div class="search">
+					<select class="select1">
+						<option value="01">10개씩 보기</option>
+						<option value="02" selected>15개씩 보기</option>
+						<option value="03">20개씩 보기</option>
+						<option value="04">25개씩 보기</option>
+						<option value="05">30개씩 보기</option>
+						<option value="06">35개씩 보기</option>
+						<option value="07">40개씩 보기</option>
+						<option value="08">45개씩 보기</option>
+						<option value="09">50개씩 보기</option>
+
+					</select> <select class="select2">
+						<option value>전체</option>
+						<option value="A">제목</option>
+						<option value="B">내용</option>
+						<option value="C">작성자</option>
+					</select> <input type="text" class="select3" placeholder="검색어를 입력하세요">
+					<button class="lookup">
+						<img src="/img/icon.png">검색
+					</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th width="10%">번호</th>
+							<th width="45%">제목</th>
+							<th width="15%">첨부파일</th>
+							<th width="15%">등록일</th>
+							<th width="15%">조회수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>제 1차 포럼</td>
+							<td>-</td>
+							<td>2022.11.17</td>
+							<td>3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

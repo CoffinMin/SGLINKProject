@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutMain}">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js">
+</script>
+<head>
+<meta charset="UTF-8">
+<title>메인페이지</title>
+<link href="/css/main/main.css" rel="stylesheet">
+<script th:inline="javascript">
+			const msg = [[${msg}]]
+	    	alert(msg);
+	    	
+	    </script>
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div class="cards-list">
+			<a href="/bigdata/bigdataList">
+				<div class="cad1" style="background: #DF0101;">
+
+					<div class="card_image">
+						<img src="/img/main/link04.png">
+					</div>
+					<div class="card_title title-white">
+						<p>빅데이터</p>
+					</div>
+
+				</div>
+			</a>
+
+			<div class="cad2" style="background: #FF8000;">
+				<div class="card_image">
+					<img src="/img/main/link05.png">
+				</div>
+				<div class="card_title title-white">
+					<p>기업지원</p>
+				</div>
+			</div>
+
+			<div class="cad3" style="background: #088A08;">
+				<div class="card_image">
+					<img src="/img/main/link06.png">
+				</div>
+				<div class="card_title title-white">
+					<p>학생지원</p>
+				</div>
+			</div>
+
+			<div class="cad4" style="background: #045FB4;">
+				<div class="card_image">
+					<img src="/img/main/link07.png">
+				</div>
+				<div class="card_title title-white">
+					<p>장비지원</p>
+				</div>
+			</div>
+
+			<div class="cad5" style="background: #5F04B4;">
+				<div class="card_image">
+					<img src="/img/main/link09.png">
+				</div>
+				<div class="card_title title-white">
+
+					<p>커뮤니티</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="cont">
+			<div id="btn_group"></div>
+			<div id="search">
+
+				<form class="search-form" action="/boards/total/list" method="get">
+					<input type="text" name="searchKeyword" placeholder="Search"
+						class="search-input">
+					<div class="finder">
+						<img src="/img/main/finder.png">
+					</div>
+					<!-- <button type="submit" class="search-button">
+						<svg class="submit-button"></svg>
+					</button> -->
+				</form>
+			</div>
+
+
+			<div class="tabs">
+				<div class="tab-header">
+					<div class="active">
+						<i class="<!-- fa fa- -->code"></i> 공지사항
+					</div>
+					<div>
+						<i class="<!-- fa fa- -->pencil-square-o"></i> 오픈게시판
+					</div>
+					<div>
+						<i class="<!-- fa fa -->-bar-chart"></i> 가족사업
+					</div>
+					<div>
+						<i class="<!-- fa fa -->-envelope-o"></i> 커뮤니티
+					</div>
+				</div>
+				<div class="tab-indicator"></div>
+				<div class="tab-body">
+
+					<div class="active">
+						<h2></h2>
+						<form id="frm" method="get">
+							<p class="tb" th:if="${list.BoardName == 'NoticeBoard'}"
+								th:each="list,index : ${resultMap.list}">
+								<a th:href="@{./boards/notice/view(id=${list.id})}"><span
+									th:text="${'[공지사항] '+list.title}" class="noto"></span></a> <span
+									class="date"
+									th:text="${#temporals.format(list.registerTime, 'MM-dd')}"></span>
+							</p>
+						</form>
+
+
+					</div>
+
+					<div>
+						<h2></h2>
+
+						<form id="frm" method="get">
+							<p class="tb" th:each="list1,index1 : ${resultMap.list1}">
+								<a th:href="@{./boards/openino/view(id=${list1.id})}"><span
+									th:text="${'[오픈게시판] '+list1.title}" class="noto"></span></a> <span
+									class="date"
+									th:text="${#temporals.format(list1.registerTime, 'MM-dd')}"></span>
+							</p>
+						</form>
+
+					</div>
+
+					<div>
+						<h2></h2>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 정관민님이 돌아올 예정.." class="noto">
+									[가족사업] 정관민님이 돌아올 예정..</span></a> <span class="date">22.11.19</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 최성은님이 카드사업으로 창업 준비 중.."
+								class="noto"> [가족사업] 최성은님이 카드사업으로 창업 준비 중..</span></a> <span
+								class="date">22.11.17</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 김동평님 탭메뉴 구축하다 심신미약.."
+								class="noto"> [가족사업] 김동평님 탭메뉴 구축하다 심신미약..</span></a> <span
+								class="date">22.11.16</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 권도현님 코드 구현 중 한남대로 도망.."
+								class="noto"> [가족사업] 권도현님 코드 구현 중 한남대로 도망..</span></a> <span
+								class="date">22.11.14</span>
+						</p>
+						<p class="tb">
+							<a href="#"><span title="[가족사업] 박은비님 집으로 도망칠 예정.."
+								class="noto"> [가족사업] 박은비님 집으로 도망칠 예정..</span></a> <span class="date">22.11.11</span>
+						</p>
+					</div>
+					<div>
+						<h2></h2>
+
+						<form id="frm" method="get">
+							<p class="tb" th:if="${list.BoardName == 'FreeBoard'}"
+								th:each="list,index : ${resultMap.list}">
+								<a th:href="@{./boards/notice/view(id=${list.id})}"><span
+									th:text="${'[자유게시판] '+list.title}" class="noto"></span></a> <span
+									class="date"
+									th:text="${#temporals.format(list.registerTime, 'MM-dd')}"></span>
+							</p>
+						</form>
+
+					</div>
+					<script src="/js/tabmenu.js"></script>
+				</div>
+			</div>
+			<div class="tabs1">
+				<div class="tab-header1">
+					<div class="active1">
+						<i class="<!-- fa fa- -->code"></i> 행사소식
+					</div>
+
+				</div>
+				<div class="wrapper"></div>
+				<div class="container">
+					<div th:fragment="slide1" id="slide1">
+						<ul class="slider">
+							<div class="item">
+								<img src="/img/tabs1/test1.jpg">
+							</div>
+							<div class="item">
+								<img src="/img/tabs1/test2.jpg">
+							</div>
+							<div class="item">
+								<img src="/img/tabs1/test3.jpg">
+							</div>
+						</ul>
+						<script src="/js/slide1.js"></script>
+					</div>
+				</div>
+			</div>
+			<script src="/js/tabmenu2.js"></script>
+		</div>
+	</div>
+</body>
+</html>

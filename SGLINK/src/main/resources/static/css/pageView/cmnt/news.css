@@ -1,0 +1,41 @@
+.top1 {
+	position: relative;
+	height: 120px;
+}
+
+.subtitle {
+	border-bottom: 2px #d3d3d3 solid;
+}
+
+.search table {
+	border-collapse: separate;
+	text-indent: initial;
+	border-spacing: 2px;
+}
+
+.pk {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	position: absolute;
+}
+
+.cd select {
+	width: 165px;
+	height: 25px;
+}
+
+.cd sumit {
+	height: 500px;
+}
+
+#myImg {
+	width: 720px;
+	height: 1000px;
+}
+
+.main {
+	position: relative;
+	width: 720px; height : 1000px;
+	border: 1px solid;
+	height: 1000px;
+}

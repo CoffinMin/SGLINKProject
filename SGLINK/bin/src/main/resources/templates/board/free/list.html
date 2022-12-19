@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	layout:decorate="~{layouts/layoutCmnt}">
+<head>
+<title>공지게시판</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- 게시판 css -->
+<link th:href="@{/css/board/notice/list.css}" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+
+		<div class="board_wrap">
+			 
+			<form id="frm" method="get">
+				<div class="board_list_wrap">
+					
+					<table class="board_list">				
+						<thead>
+							
+							<tr class="top">
+							 	<!-- <th class="num1 borderside" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">삭제<input type="checkbox" id="chkAll" ></th> -->
+								<th class="num borderside"><input type="checkbox" id="chkAll" sec:authorize="hasAnyAuthority('ROLE_ADMIN')" >번호</th>
+								<th class="title borderside centertit">제목</th>
+								<th class="writer borderside">작성자</th>
+								<th class="count borderside">조회수</th>
+								<th class="date borderside">작성일</th>
+
+							</tr>
+							
+						
+						</thead>
+						<tbody >
+						
+							<tr th:if="${list.BoardName == 'FreeBoard'}" th:each="list,index : ${resultMap.list}"
+								th:with="paging=${resultMap.paging}">
+
+								<!-- <td class="num1 border side" sec:authorize="hasAnyAuthority('ROLE_ADMIN')"><input type="checkbox" name="deleteId"
+									th:value="${list.id}"></td> -->
+									
+								<td class="num borderside">
+								<input type="checkbox" name="deleteId"
+									th:value="${list.id}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+								<span
+									th:text="${(resultMap.totalCnt - index.index) - (paging.pageNumber * paging.pageSize)}"></span>
+								</td>
+								
+								<td class="title borderside"><a th:href="@{./view(id=${list.id})}"><span
+										th:text="${list.title}"></span></a></td>
+								
+										
+								<td class="writer borderside"><span th:text="${list.Member.userId}"></span></td>
+								
+								
+								<td class="count borderside"><span th:text="${list.readCnt}"></span></td>
+								
+								
+								<td class="date borderside">
+
+									<!-- 년월일로만 표시${#temporals.format(list.registerTime, 'yyyy-MM-dd')} -->
+									<span
+									th:text="${#temporals.format(list.registerTime, 'MM-dd')}"></span>
+								</td>
+								
+								
+								</tr>
+								
+											
+						</tbody>
+					</table>
+					<div >
+						<div class="board_page">
+							<ul class="" >
+								<li class="page-item"
+									th:each="index : ${#numbers.sequence(1, resultMap.totalPage)}"
+									th:with="paging=${resultMap.paging}"><a class="page-link"
+									th:href="@{./list(page=${index - 1},page=${paging.pageSize})}"><span
+										th:text="${index}"></span></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+				 	<div class="bt_wrap" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+						<a onclick="fnDelete()"> 삭제하기</a> 
+					</div>
+					<div class="bt_wrap">
+						<a onclick="javascript:location.href='/boards/free/write'">글쓰기</a>
+					</div>
+
+				</div>
+			</form>
+		</div>
+
+	
+
+
+	<!--     스크립트 추가 -->
+	<script th:inline="javascript">
+		// header checkbox event
+		$("#chkAll").click(function() {
+			if (this.checked) {
+				$("input[name='deleteId']").prop("checked", true);
+			} else {
+				$("input[name='deleteId']").prop("checked", false);
+			}
+		});
+
+		// body checkbox event
+		$("input[name='deleteId']").click(function() {
+			let delInpLen = $("input[name='deleteId']").length;
+			let delInpChkLen = $("input[name='deleteId']:checked").length;
+
+			if (delInpLen == delInpChkLen) {
+				$("#chkAll").prop("checked", true);
+			} else {
+				$("#chkAll").prop("checked", false);
+			}
+		});
+
+		function fnDelete() {
+			let delInpChkLen = $("input[name='deleteId']:checked").length;
+
+			if (delInpChkLen > 0) {
+				if (confirm("삭제하시겠습니까?")) {
+					let frm = $("#frm");
+					frm.attr("action", "/boards/free/delete");
+					frm.attr("method", "get");
+					frm.submit();
+				}
+			} else {
+				alert("Not selected.");
+			}
+		}
+	</script>
+	</div>
+</body>
+</html>

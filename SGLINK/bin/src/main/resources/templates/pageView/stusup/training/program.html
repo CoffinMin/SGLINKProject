@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutStu}">
+<head>
+<meta charset="UTF-8">
+<title>학생현장실습프로그램페이지</title>
+<link href="/css/pageView/stusup/training/program.css"
+	rel="stylesheet">
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+	<div id="Title">
+			<p class="subTitle1">현장실습</p>
+			<p class="subTitle2">현장실습 프로그램화면입니다</p>
+		</div>
+		<div class="body">
+			<div class="content">
+				<div class="search">
+					<select class="select1">
+						<option value>전체</option>
+						<option value>소기업</option>
+						<option value>중견기업</option>
+						<option value>대기업</option>
+						<option value>연구기관</option>
+
+					</select> <select class="select2">
+						<option value>전체</option>
+						<option value="A">제목</option>
+						<option value="B">내용</option>
+						<option value="C">작성자</option>
+					</select> <input type="text" class="select3" placeholder="검색어를 입력하세요">
+					<button class="lookup">
+						<img src="/img/icon.png">검색
+					</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th width="5%">번호</th>
+							<th width="10%">기관명</th>
+							<th width="20%">제목</th>
+							<th width="15%">등록일</th>
+							<th width="10%">작성자</th>
+							<th width="10%">조회수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>중견기업</td>
+							<td>2022년 하계방학 포스코 스틸브릿지(대학생 현장실습) 지원</td>
+							<td>22-05-10 16:43</td>
+							<td>홍길동</td>
+							<td>306</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

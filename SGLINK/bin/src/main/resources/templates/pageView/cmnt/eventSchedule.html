@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutCmnt}">
+<head>
+<meta charset="UTF-8">
+<title>event</title>
+<link th:href="@{/css/pageview/cmnt/eventSchedule.css}" rel="stylesheet">
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">행사일정</p>
+			<p class="subTitle2">행사일정을 알려드립니다</p>
+		</div>
+		<div id="eventschedule">
+
+			<div class="subtitle">
+				<p>서강대학교 LINC의 행사일정입니다.</p>
+			</div>
+			<div class="schedulevent">
+				<div class="se_cld">
+					<div class="cld_header">
+						<form name="cform" action="newscalendar.do" method="post">
+							<div class="ym_num">
+								<div class="fields">
+									<span class="field"> <span class="cd select"> <select
+											name="rYear" onchange="goCalendar();">
+
+												<option value="2011">2011</option>
+
+												<option value="2012">2012</option>
+
+												<option value="2013">2013</option>
+
+												<option value="2014">2014</option>
+												<option value="2015">2015</option>
+
+												<option value="2016">2016</option>
+
+												<option value="2017">2017</option>
+
+												<option value="2018">2018</option>
+
+												<option value="2019">2019</option>
+
+												<option value="2020">2020</option>
+
+												<option value="2021">2021</option>
+
+												<option value="2022" selected="">2022</option>
+
+												<option value="2023">2023</option>
+
+												<option value="2024">2024</option>
+
+												<option value="2025">2025</option>
+
+										</select>
+									</span>
+									</span> <span class="field"><label>년</label></span> <span
+										class="field"> <span class="cd select"> <select
+											name="rMonth" onchange="goCalendar();">
+
+												<option value="1">1</option>
+
+												<option value="2">2</option>
+
+												<option value="3">3</option>
+
+												<option value="4">4</option>
+
+												<option value="5">5</option>
+
+												<option value="6">6</option>
+
+												<option value="7">7</option>
+
+												<option value="8">8</option>
+
+												<option value="9">9</option>
+
+												<option value="10">10</option>
+
+												<option value="11" selected="">11</option>
+
+												<option value="12">12</option>
+
+										</select>
+									</span>
+									</span> <span class="field"><label>월</label></span>
+								</div>
+							</div>
+
+							<span class="btn btn_prev"><button type="button"
+									onclick="goBackMonth('2022', '11', '/newscalendar.do');return false;"
+									title="이전달"></button></span> <span class="btn btn_next"><button
+									type="button"
+									onclick="goNextMonth('2022', '11','/newscalendar.do');return false;"
+									title="다음달"></button></span>
+
+						</form>
+					</div>
+					<table cellspacing="0" border="1" class="tb_cal">
+						<caption>캘린더</caption>
+						<thead>
+							<tr class="first-row">
+								<th scope="col" class="sun first-column">일</th>
+								<th scope="col">월</th>
+								<th scope="col">화</th>
+								<th scope="col">수</th>
+								<th scope="col">목</th>
+								<th scope="col">금</th>
+								<th scope="col" class="sat">토</th>
+							</tr>
+						</thead>
+						<!-- N :<span>태그에 class추가(.cm_none : 이전달/다음달, .cm_on : 일정이 있을때 .cm_ing : 일정기간있을때) -->
+						<tbody>
+							<tr>
+
+								<td class="first-column"><span class="cm_none"></span></td>
+
+								<td><span class="cm_none"></span></td>
+
+								<td><span class="">1</span></td>
+
+								<td><span class="">2</span></td>
+
+								<td><span class="">3</span></td>
+
+								<td><span class="">4</span></td>
+
+								<td><span class="sat">5</span></td>
+
+							</tr>
+							<tr>
+
+								<td class="first-column"><span class="sun">6</span></td>
+
+								<td><span class="">7</span></td>
+
+								<td><span class="">8</span></td>
+
+								<td><span class="">9</span></td>
+
+								<td><span class="">10</span></td>
+
+								<td><span class="">11</span></td>
+
+								<td><span class="sat">12</span></td>
+
+							</tr>
+							<tr>
+
+								<td class="first-column"><span class="sun">13</span></td>
+
+								<td><span class="">14</span></td>
+
+								<td><span class="">15</span></td>
+
+								<td><span class="">16</span></td>
+
+								<td><span class="">17</span></td>
+
+								<td><span class="">18</span></td>
+
+								<td><span class="sat">19</span></td>
+
+							</tr>
+							<tr>
+
+								<td class="first-column"><span class="sun">20</span></td>
+
+								<td><span class="">21</span></td>
+
+								<td><span class="">22</span></td>
+
+								<td><span class="">23</span></td>
+
+								<td><span class="">24</span></td>
+
+								<td><span class="">25</span></td>
+
+								<td><span class="sat">26</span></td>
+
+							</tr>
+							<tr>
+
+								<td class="first-column"><span class="sun">27</span></td>
+
+								<td><span class="">28</span></td>
+
+								<td><span class="">29</span></td>
+
+								<td><span class="">30</span></td>
+
+								<td><span class="day disabled"></span></td>
+
+								<td><span class="day disabled"></span></td>
+
+								<td><span class="day disabled"></span></td>
+
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="se_list">
+					<h2>
+						<strong>2022년 11월</strong> <span>행사일정</span>
+					</h2>
+					<ul>
+						<li class="list">등록된 일정이 없습니다.</li>
+					</ul>
+				</div>
+				<div class="se_cld"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

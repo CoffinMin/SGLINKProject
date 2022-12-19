@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<meta charset="UTF-8">
+<title>Title</title>
+<!-- CSS only -->
+
+<th:block layout:fragment="script"></th:block>
+</th:block>
+
+<th:block layout:fragment="css"></th:block>
+<link th:href="@{/css/layout/layout.css}" rel="stylesheet">
+<link th:href="@{/css/layout/header.css}" rel="stylesheet">
+<link th:href="@{/css/layout/slide.css}" rel="stylesheet">
+<link th:href="@{/css/layout/sidebar.css}" rel="stylesheet">
+<link th:href="@{/css/layout/footer.css}" rel="stylesheet">
+</th:block>
+</head>
+<body>
+	<div id="wrap">
+		<div th:replace="myfragments/header::header"></div>
+		<div th:replace="myfragments/slide::slide"></div>
+		<div id="container">
+			<div th:replace="myfragments/sidebar::sidebar"></div>
+			<div layout:fragment="content"></div>
+		</div>
+
+		<div th:replace="myfragments/footer::footer"></div>
+	</div>
+
+</body>
+</html>

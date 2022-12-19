@@ -1,0 +1,424 @@
+.cards-list {
+	position: relative;
+	height: 500px;
+	width: 1300px;
+}
+
+.card_image img {
+	width: 85px;
+	height: 85px;
+	border-radius: 10px;
+	margin-left: 35px;
+	margin-top: 25px;
+
+}
+
+.card .card_image img {
+	width: 100px;
+	height: 100px;
+	border-radius: 0px;
+	margin-left: 35px;
+	margin-top: 25px;
+}
+
+
+.cards-list p{
+	margin-top: 2%;
+	font-size: 23px;	
+	color: white;
+	text-weight: bold;
+}
+
+.card_title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: -px;
+	height: 40px;
+}
+
+div[class*="cad"] {
+	margin-top: 150px;
+	width: 170px;
+	height: 170px;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.4s;
+	float: left;
+	margin-left: 75px;
+}
+
+div[class*="cad"]:hover {
+	transform: scale(0.9, 0.9);
+	box-shadow: 5px 5px 30px 10px #848484;
+}
+
+.title-black {
+	color: black;
+}
+
+@media all and (max-width: 500px) {
+	.card-list {
+		/* On small screens, we are no longer using row direction but column */
+		flex-direction: column;
+	}
+}
+
+#cont {
+	position: relative;
+	width: 1300px;
+}
+
+.search-form {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	height: 60px;
+	border-radius: 40px;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+	transform: translate(-50%, -50%);
+	background: #fff;
+	transition: all 0.3s ease;
+	&.
+	focus
+	{
+	box-shadow
+	:
+	0
+	3px
+	4px
+	rgba(
+	0
+	,
+	0
+	,
+	0
+	,
+	0.15
+	);
+}
+
+}
+.search-input {
+	position: absolute;
+	top: 10px;
+	left: 55px;
+	font-size: 30px;
+	background: none;
+	color: #5a6674;
+	width: 500px;
+	height: 50px;
+	border: none;
+	appearance: none;
+	outline: none;
+	&::
+	-webkit-search-cancel-button
+	{
+	appearance
+	:
+	none;
+}
+
+}
+.search-button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 5px;
+	width: 20px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	outline: none !important;
+	cursor: pointer;
+}
+
+.finder img {
+	width: 27px;
+	margin-top: 17px;
+	margin-left: 18px;
+}
+
+
+
+
+
+.tabs {
+	position: absolute;
+	top: 780%;
+	left: 18%;
+	transform: translate(-50%, -50%);
+	width: 650px;
+	height: 450px;
+	background: #232131;
+	padding: 20px 30px;
+	overflow: hidden;
+	border-radius: 50px;
+	box-shadow: 5px 10px 6px #ccc;
+	/*주석  */
+}
+
+.tabs .tab-header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.tabs .tab-header>div {
+	width: calc(100%/ 4);
+	text-align: center;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 20px;
+	text-transform: uppercase;
+	outline: none;
+}
+
+.tabs .tab-header>div>i {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.tabs .tab-header>div.active {
+	color: #ffffff;
+}
+
+.tabs .tab-indicator {
+	position: relative;
+	width: calc(100%/ 4);
+	height: 5px;
+	background: #B40404;
+	left: 0px;
+	border-radius: 5px;
+	transition: all 500ms ease-in-out;
+}
+
+.tabs .tab-body {
+	position: relative;
+ 	height: /* calc(100% - 60px);  */360px;
+	padding: 10px 5px;
+	background: #232131;
+	border-radius: 100px;
+}
+
+.tabs .tab-body>div {
+	position: absolute;
+	top: -200%;
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out
+		0ms;
+}
+
+.tabs .tab-body>div.active {
+	top: 100px;
+	left: 80px;
+	opacity: 1;
+	transform: scale(1.5);
+}
+
+.tb a {
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.noto {
+	color: #ffffff;
+}
+
+.active p {
+	width: 420px;
+	height: 35px;
+	padding-left: 35px;
+}
+
+
+.date {
+	float: right;
+	width: 60px;
+	font-size: 13px;
+	color: #ffffff;
+}
+
+.input {
+	margin-top: -10px;
+	width: 400px;
+	height: 40px;
+	border: 1px solid darkgray;
+	border-radius: 5px;
+	outline: none;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.tabs1 {
+	position: absolute;
+	top: 780%;
+	left: 82%;
+	transform: translate(-50%, -50%);
+	width: 650px;
+	height: 450px;
+	background: #232131;
+	padding: 20px 30px;
+	overflow: hidden;
+	border-radius: 50px;
+	box-shadow: 5px 10px 6px #ccc;
+}
+
+.tabs1 .tab-header1 {
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+ .tabs1 .tab-header1>div {
+	width: calc(100%/ 4);
+	text-align: center;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 14px;
+	text-transform: uppercase;
+	outline: none;
+} 
+
+.tabs1 .tab-header1>div>i {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.tabs1 .tab-header1>div.active1 {
+	color: #ffffff;
+}
+
+/* .tabs1 .tab-indicator1 {
+	position: relative;
+	width: calc(100%/ 4);
+	height: 5px;
+	background: #B40404;
+	left: 0px;
+	border-radius: 5px;
+	transition: all 500ms ease-in-out;
+} */
+
+.tabs1 .tab-body1 {
+	position: relative;
+	height: calc(100% - 60px);
+	padding: 50px 10px;
+}
+
+.tab-body1 img {
+	width: 400px;
+	margin-left: 100px;
+}
+
+.d_clear img {
+	width: 650px;
+	height: 400px;
+}
+
+.slide1 {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	user-select: none;
+}
+
+.slide_item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	left: 0px;
+	width: 100%;
+	height: 300px;
+	flex-shrink: 0;
+	transition: left 0.15s;
+}
+
+.slide_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: calc(90%);
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background-color: #cccc;
+	cursor: pointer;
+}
+
+.slide_prev_button {
+	left: 44%;
+}
+
+.slide_next_button {
+	right: 44%;
+}
+
+.slide_item.item1 {
+	background-color: darkgoldenrod;
+}
+
+.slide_item.item2 {
+	background-color: aqua;
+}
+
+.slide_item.item3 {
+	background-color: blueviolet;
+}
+
+.slide_item.item4 {
+	background-color: burlywood;
+}
+
+.slide_item.item5 {
+	background-color: cornflowerblue;
+}
+
+.slide_pagination {
+	display: flex;
+	column-gap: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.slide_pagination>li {
+	color: #7fb5ff88;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+.slide_pagination>li.active {
+	color: #7fb5ff;
+}
+
+.slide_item_duplicate {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	left: 0px;
+	width: 100%;
+	height: 300px;
+	flex-shrink: 0;
+	transition: left 0.15s;
+}

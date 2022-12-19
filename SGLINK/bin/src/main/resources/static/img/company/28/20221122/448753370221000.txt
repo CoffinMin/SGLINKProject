@@ -1,0 +1,155 @@
+#header {
+	margin-top: 10px;
+	margin-bottom: -5px;
+	height: 45px;
+	border-bottom: 2px #d3d3d3 solid;
+}
+
+#header>a {
+	margin-left: 15px;
+	font-size: 25px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	font-weight: 400;
+	float: left;
+}
+
+#login {
+	position: relative;
+	float: right;
+	margin-right: 20px;
+	height: 50px;
+}
+
+#login>a {
+	font-weight: 400;
+	font-size: 25px;
+	text-align: center;
+	font-size: 25px;
+}
+
+.topmenu {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 18px;
+	letter-spacing: -0.5px;
+	text-decoration: none;
+	font-weight: 550;
+}
+
+#login>h {
+	margin-left: 8px;
+	margin-right: 8px;
+	font-size: 25px;
+	text-decoration: none;
+	font-weight: 550;
+	float: left;
+}
+
+#sns {
+	margin-right: 25px;
+	letter-spacing: 5px;
+	float: right;
+}
+
+#sns img {
+	margin-top: 3px;
+	width: 30px;
+	height: 30px;
+}
+
+#TopMenu {
+	height: 60px;
+}
+
+#home img {
+	position: absolute;
+	margin-left: 10px;
+	width: 17%;
+}
+
+#pMenu {
+	margin-top: 20px;
+	margin-left: 450px;
+}
+
+#pMenu>ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#pMenu li {
+	display: block;
+	float: left;
+	font-size: 30px;
+	font-weight: 550;
+	letter-spacing: -1px;
+	text-decoration: none;
+}
+
+#pMenu li a {
+	height:60px;
+	margin-left:90px;
+	margin-right:90px;
+	display: block;
+	text-decoration: none;
+}
+
+#pMenu li a:hover, ul li:hover a {
+	color: #FA5858;
+	text-decoration: none;
+}
+
+#pMenu li ul {
+	margin-left:80px;
+	margin-right:92px;
+	background: #FAFAFA;
+	display: none;
+	position: absolute;
+	width: 200px;
+	z-index: 400;
+	border: 1px solid #f2f2f2;
+	border-top:none;
+	border-bottom:none;
+}
+
+#pMenu li:hover ul {
+	display: block;
+}
+
+#pMenu li li {
+	display: block;
+	float: center;
+	height:60px;
+	width:170px;
+	padding: 0px;
+	border-bottom: 1px solid #f2f2f2;
+}
+#pMenu li li a{
+	margin-left:25px;
+	margin-top:15px;
+	padding-left:35px;
+}
+#pMenu li:hover li a {
+	background: none;
+}
+
+#pMenu li ul a {
+	margin-left: -20px;
+	text-align: center;
+	color:black;
+	display: block;
+	width:122px;
+	height: 25px;
+	font-size: 23px;
+}
+
+#pMenu li ul a:hover, li ul li:hover a {
+	text-decoration: none;
+	color: #FA5858;
+}
+
+#slidebtn {
+	width: 35px;
+	height: 35px;
+}

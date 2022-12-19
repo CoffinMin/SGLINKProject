@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutCom}">
+<head>
+<meta charset="UTF-8">
+<title>인프라사업신청페이지</title>
+<link href="/css/pageView/comsup/infra/application.css" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">인프라</p>
+			<p class="subTitle2">사업 신청화면입니다</p>
+		</div>
+		<div id="introduce">
+			<div class="body">
+				<div class="content">
+					<div class="ob">
+						<p>프로젝트명</p>
+						<p>기업명</p>
+						<p>대표자명</p>
+						<p>전화번호</p>
+						<p>프로젝트 내용</p>
+					</div>
+					<div class="ct">
+						<textarea placeholder="내용을 입력해주세요"></textarea>
+					</div>
+					<div class="ct">
+						<textarea placeholder="내용을 입력해주세요"></textarea>
+					</div>
+					<div class="ct">
+						<textarea placeholder="내용을 입력해주세요"></textarea>
+					</div>
+					<div class="ct">
+						<textarea placeholder="내용을 입력해주세요"></textarea>
+					</div>
+				</div>
+				<div class="ct2">
+					<textarea placeholder="내용을 입력해주세요"></textarea>
+				</div>
+				<div class="ob2">
+					<p>첨부파일</p>
+					<input type="file" />
+				</div>
+				<div class="nt">
+					<p>* 사업 공고 관련 이미지 필수로 제출해주셔야합니다.</p>
+				</div>
+
+			</div>
+			<button class="appl">신청하기</button>
+		</div>
+	</div>
+</body>
+</html>

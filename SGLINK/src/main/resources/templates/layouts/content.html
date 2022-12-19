@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layoutStu}">
+<head>
+<meta charset="UTF-8">
+<title>레이아웃</title>
+<link href="/css/board/introduce/direction.css" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="direction">
+			<div id="head">
+				<div class="title">
+					찾아오시는 길
+				</div>
+				<div class="subtitle">
+					<p>서강대학교 LINC의 위치 정보입니다.</p>
+				</div>
+			</div>
+			<div class="body">
+				<div class="contents">
+					<img width="640" height="416" class="txc-image"
+						style="width: 676px; height: 429px; clear: none; float: none;"
+						src="http://linc.sogang.ac.kr/dataview/temp/DEI20160901110958.png">
+					<img width="640" height="236" class="txc-image"
+						style="width: 694px; height: 259px; clear: none; float: none;"
+						src="http://linc.sogang.ac.kr/dataview/temp/DEI20160901110910.png">
+					<h2 class="bl sq">LINC 사업단 위치</h2>
+					<table>
+						<thead>
+							<tr>
+								<th width="50px">건물</th>
+								<th width="20px">호수</th>
+								<th width="80px">소속</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2">떼이야르관(TE관)</td>
+								<td>503호</td>
+								<td class="bl gd"><a>창업교육센터</a></td>
+							</tr>
+							<tr>
+								<td>218호</td>
+								<td class="bl gd"><a>SISC(나노펩센터)</a></td>
+							</tr>
+							<tr>
+								<td>리찌과학관(R관)</td>
+								<td>314호</td>
+								<td class="bl gd"><a>SISC(유기반응센터)</a></td>
+							</tr>
+							<tr>
+								<td>아루페관(AR관)</td>
+								<td>201호</td>
+								<td class="bl gd"><a>융합클리닉센터</a></td>
+							</tr>
+							<tr>
+								<td rowspan="3">베르크만스 우정원(BW관)</td>
+								<td>300호</td>
+								<td class="bl gd"><a>현장실습센터</a></td>
+							</tr>
+							<tr>
+								<td>700호</td>
+								<td class="bl gd"><a>오픈이노베이션센터</a></td>
+							</tr>
+							<tr>
+								<td>703호</td>
+								<td class="bl gd"><a>LINC사업팀</a></td>
+							</tr>
+							<tr>
+								<td>가브리엘관(GA관)</td>
+								<td>108호</td>
+								<td class="bl gd"><a>SISC행정팀</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<h2 class="bl sq">LINC 사업단 연락처</h2>
+					<table>
+						<thead>
+							<tr>
+								<th width="20px">주소</th>
+								<td width="80px" height="50px"><a
+									style="font-size: 11px; float: left; margin-left: 15px;">(우)04107
+										서울특별시 마포구 백범로 35 (신수동) 서강대학교 베르크만스우정원(BW관) 703호 LINC사업단</a></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>전화</th>
+								<td><a>02-3274-4867/4854</a></td>
+							</tr>
+							<tr>
+								<th>팩스</th>
+								<td><a>02-705-8023</a></td>
+							</tr>
+							<tr>
+								<th>메일</th>
+								<td><a href="mailto:linc@sogang.ac.kr"
+									style="text-decoration: none;">linc@sogang.ac.kr</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutStu}">
+<head>
+<meta charset="UTF-8">
+<title>학생지원독립공간페이지</title>
+<link href="/css/pageView/stusup/cooperation/independent.css"
+	rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">산학연계</p>
+			<p class="subTitle2">독립공간 운영화면입니다</p>
+		</div>
+		<div class="body">
+			<div class="content">
+				<h2 class="bl sq">
+					살펴보기<br>
+				</h2>
+				<p>사다리Lab에서 운영하는 사업화를 위한 전용독립공간으로 최대 2년까지 사용할 수 있습니다. 본격적인
+					사업화계획이 결정된 후, 본교와의 계약체결을 통하여 입주하게 됩니다.</p>
+				<h2 class="bl sq">
+					입주현황<br>
+				</h2>
+				<table>
+					<thead>
+						<tr>
+							<th width="10%">입주공간</th>
+							<th width="8%">면적</th>
+							<th width="5%">좌석</th>
+							<th width="10%">임대료(월)</th>
+							<th width="10%">지원액(월)</th>
+							<th width="15%">실부담액(월)</th>
+							<th width="15%">상태</th>
+							<th width="10%">입주예약</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>독립공간</td>
+							<td>66.1 ㎡</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td><span class="rk">사용불가</span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>오픈공간</td>
+							<td>66.1 ㎡</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td><span class="gw">입주대기</span></td>
+							<td><button class="jt">신청</button></td>
+						</tr>
+					</tbody>
+
+				</table>
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

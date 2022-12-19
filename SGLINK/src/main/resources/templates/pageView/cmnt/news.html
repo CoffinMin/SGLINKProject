@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout=http://www.ultraq.net.nz/thymeleaf/layout
+	layout:decorate="~{layouts/layoutCmnt}">
+<head>
+<meta charset="UTF-8">
+<title>news</title>
+<link th:href="@{/css/pageView/cmnt/news.css}" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">행사뉴스</p>
+			<p class="subTitle2">서강대학교의 행사뉴스를 알려드립니다</p>
+		</div>
+		<div id="news">
+
+			<div class="pk">
+				<span class="cd select"> <select name="pkid" id="ntpay">
+						<option value="/img/cmnt/newspage.jpg">LINC Newsletter
+							13호</option>
+						<option value="/img/cmnt/event2.jpg">LINC Newsletter 12호</option>
+						<option value="/img/cmnt/event3.jpg">LINC Newsletter 11호</option>
+						<option value="155">LINC Newsletter 10호</option>
+						<option value="127">LINC Newsletter 9호</option>
+						<option value="80">LINC Newsletter 8호</option>
+						<option value="79">LINC Newsletter 7호</option>
+						<option value="78">LINC Newsletter 6호</option>
+						<option value="77">LINC Newsletter 5호</option>
+						<option value="76">LINC Newsletter 4호</option>
+						<option value="75">LINC Newsletter 3호</option>
+						<option value="74">LINC Newsletter 2호</option>
+						<option value="73">LINC Newsletter 1호</option>
+				</select>
+				</span>
+
+				<div class="main">
+					<img id="myImg" src="/img/cmnt/newspage.jpg" alt="옵션 그림">
+				</div>
+			</div>
+		</div>
+		<script>
+			let changeimg = document.getElementById("ntpay");
+			let myImg = document.getElementById("myImg");
+
+			function changeImage() {
+				let index = changeimg.selectedIndex;
+				myImg.src = changeimg.options[index].value;
+			}
+
+			changeImage();
+			changeimg.onchange = changeImage;
+		</script>
+	</div>
+</body>
+
+</html>

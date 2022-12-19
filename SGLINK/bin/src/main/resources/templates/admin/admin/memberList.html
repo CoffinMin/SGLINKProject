@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layoutAd}">
+<head>
+<title>관리자 회원관리창</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link th:href="@{/css/admin/admin/memberList.css}" rel="stylesheet">
+</head>
+<body>
+	<div layout:fragment="content" id="content">
+		<div id="Title">
+			<p class="subTitle1">회원관리창</p>
+			<p class="subTitle2">회원 현황을 알 수 있습니다</p>
+		</div>
+		<div class="board_wrap">
+			<form action="/admin/member/list" method="get">
+				<div class="board_list_wrap">
+					<table class="board_list">
+						<thead>
+							<tr class="top">
+								<th class="num1 borderside">유저아이디</th>
+								<th class="num2 borderside">권한</th>
+								<th class="num3 borderside">이메일</th>
+								<th class="num4 borderside">이름</th>
+								<th class="num5 borderside">전화번호</th>
+								<th class="num6 borderside">소속명</th>
+								<th class="num7 borderside">가입일</th>
+								<th class="num8 borderside">삭제하기</th>
+							</tr>
+
+						</thead>
+
+						<tbody>
+							<tr th:each="list,index : ${resultMap.list}"
+								th:with="paging=${resultMap.paging}">
+								<td class="num1 borderside"><span th:text="${list.userId}"></span></td>
+								<td class="num2 borderside"><span th:text="${list.role}"></span></td>
+								<td class="num3 borderside"><span
+									th:text="${list.userEmail}"></span></td>
+								<td class="num4 borderside"><span
+									th:text="${list.userName}"></span></td>
+								<td class="num5 borderside"><span th:text="${list.userTel}"></span></td>
+								<td class="num6 borderside"><span
+									th:text="${list.userUniname}"></span></td>
+								<td class="num7 borderside">
+									<!-- 년월일로만 표시${#temporals.format(list.registerTime, 'yyyy-MM-dd')} -->
+									<span
+									th:text="${#temporals.format(list.registerTime, 'yyyy-MM-dd')}"></span>
+								</td>
+								<td class="num8 borderside"><span
+									th:if="${list.userId == 'admin'}" th:text="삭제불가"></span> <a
+									th:href="@{./list/delete(userId=${list.userId})}"><span
+										th:if="${list.userId != 'admin'}" th:text="삭제하기" id="delete"></span></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div>
+						<div class="board_page">
+							<ul class="">
+								<li class="page-item"
+									th:each="index : ${#numbers.sequence(1, resultMap.totalPage)}"
+									th:with="paging=${resultMap.paging}"><a class="page-link"
+									th:href="@{./list(page=${index - 1},page=${paging.pageSize})}"><span
+										th:text="${index}"></span></a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</form>
+		</div>
+		<script th:inline="javascript">
+			$("#delete").click(function() {
+				if (confirm("삭제하시겠습니까?") == true) {
+				} else {
+					return false;
+				}
+			});
+		</script>
+
+
+	</div>
+</body>
+</html>

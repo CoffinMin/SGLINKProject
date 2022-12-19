@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mb</title>
+
+    <link href="sidebar_2.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div th:fragment="sidebar" id="side">
+        <div id="leftMenu">
+            <div id="leftTitle">
+                <a href="#">회원서비스</a>
+            </div>
+            <div id="subMenu">
+                <div class="depth1">
+                    <li class="item"><a href="/members/memberRole" id="left" class="lnb">회원가입</a></li>
+                    <li class="item"><a href="/members/login" id="left1" class="lnb">로그인</a></li>
+                    <li class="item"><a href="#" id="left2" class="lnb">아이디/비번찾기</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
